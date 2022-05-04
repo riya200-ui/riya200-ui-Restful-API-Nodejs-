@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node src/app.js",
-    "dev" : "nodemon src/app.js"
-    
+    "test": "jest --watch",
+    "start": "node src/app.js",
+    "dev": " nodemon src/app.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +18,9 @@
     "express": "^4.17.2",
     "mongoose": "^6.1.6",
     "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^8.0.2",
+    "jest": "^27.5.1"
   }
 }
