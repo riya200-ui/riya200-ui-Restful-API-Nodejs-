@@ -4,7 +4,10 @@ const mongoose = require('mongoose');
 //connect mongoodb with mongoose call krna
 //deplicataion warning for after (,)
 //connect give promese return so we have deal with
-mongoose.connect('mongodb://localhost:27017/students-api');
+mongoose.connect('mongodb+srv://auth-11:auth@cluster0.hxsje.mongodb.net/leadgeneration?retryWrites=true&w=majority',
+{useNewUrlParser:true,
+useUnifiedTopology:true,
+useCreateIndex:true});
 
 mongoose.connection.once('open', function(){
     console.log('connection has been made');
